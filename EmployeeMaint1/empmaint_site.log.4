@@ -1,0 +1,311 @@
+2014-02-17 13:27:55,734 [11] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - [session-id=5604d187-0639-4d5a-b529-63a06b538dbe] opened session at timestamp: 5704268495790080, for session factory: [/ba2ada8ad5da4cf1a6f910700b39f0ab]
+2014-02-17 13:27:55,883 [11] DEBUG NHibernate.Engine.Query.QueryPlanCache [(null)] <(null)> - unable to locate HQL query plan in cache; generating (.Take[EmployeeMaint.Data.Entities.Employee](.Skip[EmployeeMaint.Data.Entities.Employee](.OrderBy[EmployeeMaint.Data.Entities.Employee,System.String](NHibernate.Linq.NhQueryable`1[EmployeeMaint.Data.Entities.Employee], Quote((e, ) => (e.LastName)), ), p1, ), p2, ))
+2014-02-17 13:27:56,423 [11] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select << begin [level=1, statement=select]
+2014-02-17 13:27:56,465 [11] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement [(null)] <(null)> - FromClause{level=1} :  EmployeeMaint.Data.Entities.Employee (e) -> employee0_
+2014-02-17 13:27:56,508 [11] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e -> employee0_.EMP_RECORD_NUMBER
+2014-02-17 13:27:56,547 [11] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e -> employee0_.EMP_RECORD_NUMBER
+2014-02-17 13:27:56,563 [11] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement [(null)] <(null)> - handling property dereference [EmployeeMaint.Data.Entities.Employee (e) -> LastName (Class)]
+2014-02-17 13:27:56,572 [11] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode [(null)] <(null)> - getDataType() : LastName -> NHibernate.Type.StringType
+2014-02-17 13:27:56,580 [11] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e.LastName -> employee0_.EMP_LAST_NAME
+2014-02-17 13:27:56,601 [11] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select : finishing up [level=1, statement=select]
+2014-02-17 13:27:56,608 [11] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - processQuery() : ( SELECT ( {select clause} employee0_.EMP_RECORD_NUMBER ) ( FromClause{level=1} dbo.Employee employee0_ ) ( order by ( employee0_.EMP_LAST_NAME employee0_.EMP_RECORD_NUMBER LastName ) asc ) ( skip ? ) ( take ? ) )
+2014-02-17 13:27:56,669 [11] DEBUG NHibernate.Hql.Ast.ANTLR.Util.JoinProcessor [(null)] <(null)> - Using FROM fragment [dbo.Employee employee0_]
+2014-02-17 13:27:56,676 [11] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select >> end [level=1, statement=select]
+2014-02-17 13:27:56,679 [11] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter [(null)] <(null)> - throwQueryException() : no errors
+2014-02-17 13:27:56,875 [11] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator [(null)] <(null)> - SQL: SELECT TOP (?) EMP1_0_, EMP2_0_, EMP3_0_, EMP4_0_, EMP5_0_, EMP6_0_, EMP7_0_, EMP8_0_, EMP9_0_, EMP10_0_, EMP11_0_, Payment12_0_, Employe13_0_, IsExempt0_, IsOnPay15_0_, Default16_0_, IsExecu17_0_, Signature0_, Initials0_ FROM (select employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, ROW_NUMBER() OVER(ORDER BY employee0_.EMP_LAST_NAME) as __hibernate_sort_row from dbo.Employee employee0_) as query WHERE query.__hibernate_sort_row > ? ORDER BY query.__hibernate_sort_row
+2014-02-17 13:27:56,876 [11] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter [(null)] <(null)> - throwQueryException() : no errors
+2014-02-17 13:27:56,946 [11] DEBUG NHibernate.Engine.Query.QueryPlanCache [(null)] <(null)> - located HQL query plan in cache (.Take[EmployeeMaint.Data.Entities.Employee](.Skip[EmployeeMaint.Data.Entities.Employee](.OrderBy[EmployeeMaint.Data.Entities.Employee,System.String](NHibernate.Linq.NhQueryable`1[EmployeeMaint.Data.Entities.Employee], Quote((e, ) => (e.LastName)), ), p1, ), p2, ))
+2014-02-17 13:27:56,957 [11] DEBUG NHibernate.Engine.Query.HQLQueryPlan [(null)] <(null)> - find: .Take[EmployeeMaint.Data.Entities.Employee](.Skip[EmployeeMaint.Data.Entities.Employee](.OrderBy[EmployeeMaint.Data.Entities.Employee,System.String](NHibernate.Linq.NhQueryable`1[EmployeeMaint.Data.Entities.Employee], Quote((e, ) => (e.LastName)), ), p1, ), p2, )
+2014-02-17 13:27:56,964 [11] DEBUG NHibernate.Engine.QueryParameters [(null)] <(null)> - named parameters: {'p1'='40', 'p2'='30'}
+2014-02-17 13:27:57,036 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened new IDbCommand, open IDbCommands: 1
+2014-02-17 13:27:57,037 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Building an IDbCommand object for the SqlString: SELECT TOP (?) EMP1_0_, EMP2_0_, EMP3_0_, EMP4_0_, EMP5_0_, EMP6_0_, EMP7_0_, EMP8_0_, EMP9_0_, EMP10_0_, EMP11_0_, Payment12_0_, Employe13_0_, IsExempt0_, IsOnPay15_0_, Default16_0_, IsExecu17_0_, Signature0_, Initials0_ FROM (select employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, ROW_NUMBER() OVER(ORDER BY employee0_.EMP_LAST_NAME) as __hibernate_sort_row from dbo.Employee employee0_) as query WHERE query.__hibernate_sort_row > ? ORDER BY query.__hibernate_sort_row
+2014-02-17 13:27:57,052 [11] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT TOP (@p0) EMP1_0_, EMP2_0_, EMP3_0_, EMP4_0_, EMP5_0_, EMP6_0_, EMP7_0_, EMP8_0_, EMP9_0_, EMP10_0_, EMP11_0_, Payment12_0_, Employe13_0_, IsExempt0_, IsOnPay15_0_, Default16_0_, IsExecu17_0_, Signature0_, Initials0_ FROM (select employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, ROW_NUMBER() OVER(ORDER BY employee0_.EMP_LAST_NAME) as __hibernate_sort_row from dbo.Employee employee0_) as query WHERE query.__hibernate_sort_row > @p1 ORDER BY query.__hibernate_sort_row
+2014-02-17 13:27:57,069 [11] DEBUG NHibernate.SQL [(null)] <(null)> - SELECT TOP (@p0) EMP1_0_, EMP2_0_, EMP3_0_, EMP4_0_, EMP5_0_, EMP6_0_, EMP7_0_, EMP8_0_, EMP9_0_, EMP10_0_, EMP11_0_, Payment12_0_, Employe13_0_, IsExempt0_, IsOnPay15_0_, Default16_0_, IsExecu17_0_, Signature0_, Initials0_ FROM (select employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, ROW_NUMBER() OVER(ORDER BY employee0_.EMP_LAST_NAME) as __hibernate_sort_row from dbo.Employee employee0_) as query WHERE query.__hibernate_sort_row > @p1 ORDER BY query.__hibernate_sort_row;@p0 = 30 [Type: Int32 (0)], @p1 = 40 [Type: Int32 (0)]
+2014-02-17 13:27:57,079 [11] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] <(null)> - Obtaining IDbConnection from Driver
+2014-02-17 13:27:57,179 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - ExecuteReader took 97 ms
+2014-02-17 13:27:57,182 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened IDataReader, open IDataReaders: 1
+2014-02-17 13:27:57,191 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - processing result set
+2014-02-17 13:27:57,192 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 0
+2014-02-17 13:27:57,212 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5056]
+2014-02-17 13:27:57,237 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5056]
+2014-02-17 13:27:57,251 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5056]
+2014-02-17 13:27:57,259 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 1
+2014-02-17 13:27:57,260 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#55]
+2014-02-17 13:27:57,260 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#55]
+2014-02-17 13:27:57,260 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#55]
+2014-02-17 13:27:57,261 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 2
+2014-02-17 13:27:57,261 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5481]
+2014-02-17 13:27:57,261 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5481]
+2014-02-17 13:27:57,262 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5481]
+2014-02-17 13:27:57,262 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 3
+2014-02-17 13:27:57,262 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4830]
+2014-02-17 13:27:57,263 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4830]
+2014-02-17 13:27:57,263 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4830]
+2014-02-17 13:27:57,264 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 4
+2014-02-17 13:27:57,264 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5551]
+2014-02-17 13:27:57,265 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5551]
+2014-02-17 13:27:57,266 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5551]
+2014-02-17 13:27:57,267 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 5
+2014-02-17 13:27:57,267 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#110]
+2014-02-17 13:27:57,267 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#110]
+2014-02-17 13:27:57,268 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#110]
+2014-02-17 13:27:57,268 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 6
+2014-02-17 13:27:57,268 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5258]
+2014-02-17 13:27:57,269 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5258]
+2014-02-17 13:27:57,269 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5258]
+2014-02-17 13:27:57,269 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 7
+2014-02-17 13:27:57,270 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5165]
+2014-02-17 13:27:57,270 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5165]
+2014-02-17 13:27:57,270 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5165]
+2014-02-17 13:27:57,271 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 8
+2014-02-17 13:27:57,271 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#116]
+2014-02-17 13:27:57,271 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#116]
+2014-02-17 13:27:57,272 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#116]
+2014-02-17 13:27:57,272 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 9
+2014-02-17 13:27:57,272 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5093]
+2014-02-17 13:27:57,273 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5093]
+2014-02-17 13:27:57,273 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5093]
+2014-02-17 13:27:57,273 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 10
+2014-02-17 13:27:57,274 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#1]
+2014-02-17 13:27:57,274 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#1]
+2014-02-17 13:27:57,274 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#1]
+2014-02-17 13:27:57,275 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 11
+2014-02-17 13:27:57,275 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4871]
+2014-02-17 13:27:57,275 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4871]
+2014-02-17 13:27:57,275 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4871]
+2014-02-17 13:27:57,276 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 12
+2014-02-17 13:27:57,276 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5691]
+2014-02-17 13:27:57,277 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5691]
+2014-02-17 13:27:57,277 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5691]
+2014-02-17 13:27:57,277 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 13
+2014-02-17 13:27:57,277 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4977]
+2014-02-17 13:27:57,278 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4977]
+2014-02-17 13:27:57,278 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4977]
+2014-02-17 13:27:57,279 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 14
+2014-02-17 13:27:57,279 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5191]
+2014-02-17 13:27:57,279 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5191]
+2014-02-17 13:27:57,279 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5191]
+2014-02-17 13:27:57,280 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 15
+2014-02-17 13:27:57,280 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5647]
+2014-02-17 13:27:57,280 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5647]
+2014-02-17 13:27:57,281 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5647]
+2014-02-17 13:27:57,281 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 16
+2014-02-17 13:27:57,281 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5642]
+2014-02-17 13:27:57,282 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5642]
+2014-02-17 13:27:57,282 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5642]
+2014-02-17 13:27:57,282 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 17
+2014-02-17 13:27:57,283 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5692]
+2014-02-17 13:27:57,283 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5692]
+2014-02-17 13:27:57,283 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5692]
+2014-02-17 13:27:57,284 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 18
+2014-02-17 13:27:57,284 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5202]
+2014-02-17 13:27:57,284 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5202]
+2014-02-17 13:27:57,285 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5202]
+2014-02-17 13:27:57,285 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 19
+2014-02-17 13:27:57,285 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5711]
+2014-02-17 13:27:57,286 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5711]
+2014-02-17 13:27:57,286 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5711]
+2014-02-17 13:27:57,286 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 20
+2014-02-17 13:27:57,287 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#146]
+2014-02-17 13:27:57,287 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#146]
+2014-02-17 13:27:57,287 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#146]
+2014-02-17 13:27:57,288 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 21
+2014-02-17 13:27:57,288 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5410]
+2014-02-17 13:27:57,288 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5410]
+2014-02-17 13:27:57,288 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5410]
+2014-02-17 13:27:57,289 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 22
+2014-02-17 13:27:57,289 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4983]
+2014-02-17 13:27:57,289 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4983]
+2014-02-17 13:27:57,290 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4983]
+2014-02-17 13:27:57,290 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 23
+2014-02-17 13:27:57,290 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5655]
+2014-02-17 13:27:57,291 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5655]
+2014-02-17 13:27:57,291 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5655]
+2014-02-17 13:27:57,291 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 24
+2014-02-17 13:27:57,292 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5293]
+2014-02-17 13:27:57,292 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5293]
+2014-02-17 13:27:57,292 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5293]
+2014-02-17 13:27:57,292 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 25
+2014-02-17 13:27:57,293 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4941]
+2014-02-17 13:27:57,293 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4941]
+2014-02-17 13:27:57,293 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4941]
+2014-02-17 13:27:57,293 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 26
+2014-02-17 13:27:57,293 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5562]
+2014-02-17 13:27:57,294 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5562]
+2014-02-17 13:27:57,294 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5562]
+2014-02-17 13:27:57,294 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 27
+2014-02-17 13:27:57,295 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5455]
+2014-02-17 13:27:57,295 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5455]
+2014-02-17 13:27:57,295 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5455]
+2014-02-17 13:27:57,296 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 28
+2014-02-17 13:27:57,296 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#22]
+2014-02-17 13:27:57,296 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#22]
+2014-02-17 13:27:57,297 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#22]
+2014-02-17 13:27:57,297 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 29
+2014-02-17 13:27:57,298 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5140]
+2014-02-17 13:27:57,298 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5140]
+2014-02-17 13:27:57,298 [11] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5140]
+2014-02-17 13:27:57,299 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done processing result set (30 rows)
+2014-02-17 13:27:57,303 [11] DEBUG NHibernate.Driver.NHybridDataReader [(null)] <(null)> - running NHybridDataReader.Dispose()
+2014-02-17 13:27:57,304 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDataReader, open IDataReaders :0
+2014-02-17 13:27:57,304 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - DataReader was closed after 222 ms
+2014-02-17 13:27:57,307 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDbCommand, open IDbCommands: 0
+2014-02-17 13:27:57,310 [11] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:27:57,312 [11] DEBUG NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Closing connection
+2014-02-17 13:27:57,315 [11] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - total objects hydrated: 30
+2014-02-17 13:27:57,327 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5056]
+2014-02-17 13:27:57,337 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5056]
+2014-02-17 13:27:57,344 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5056
+2014-02-17 13:27:57,347 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5056@5056&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,356 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5056]
+2014-02-17 13:27:57,357 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#55]
+2014-02-17 13:27:57,357 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#55]
+2014-02-17 13:27:57,358 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#55
+2014-02-17 13:27:57,359 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#55@55&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,359 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#55]
+2014-02-17 13:27:57,359 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5481]
+2014-02-17 13:27:57,360 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5481]
+2014-02-17 13:27:57,360 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5481
+2014-02-17 13:27:57,360 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5481@5481&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,361 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5481]
+2014-02-17 13:27:57,361 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4830]
+2014-02-17 13:27:57,361 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4830]
+2014-02-17 13:27:57,362 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4830
+2014-02-17 13:27:57,362 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4830@4830&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,362 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4830]
+2014-02-17 13:27:57,363 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5551]
+2014-02-17 13:27:57,363 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5551]
+2014-02-17 13:27:57,363 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5551
+2014-02-17 13:27:57,363 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5551@5551&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,364 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5551]
+2014-02-17 13:27:57,364 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#110]
+2014-02-17 13:27:57,364 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#110]
+2014-02-17 13:27:57,364 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#110
+2014-02-17 13:27:57,365 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#110@110&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,365 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#110]
+2014-02-17 13:27:57,365 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5258]
+2014-02-17 13:27:57,366 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5258]
+2014-02-17 13:27:57,366 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5258
+2014-02-17 13:27:57,366 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5258@5258&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,366 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5258]
+2014-02-17 13:27:57,367 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5165]
+2014-02-17 13:27:57,367 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5165]
+2014-02-17 13:27:57,367 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5165
+2014-02-17 13:27:57,368 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5165@5165&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,368 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5165]
+2014-02-17 13:27:57,368 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#116]
+2014-02-17 13:27:57,369 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#116]
+2014-02-17 13:27:57,369 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#116
+2014-02-17 13:27:57,369 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#116@116&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,370 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#116]
+2014-02-17 13:27:57,370 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5093]
+2014-02-17 13:27:57,370 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5093]
+2014-02-17 13:27:57,371 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5093
+2014-02-17 13:27:57,371 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5093@5093&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,371 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5093]
+2014-02-17 13:27:57,372 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#1]
+2014-02-17 13:27:57,372 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#1]
+2014-02-17 13:27:57,372 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#1
+2014-02-17 13:27:57,372 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#1@1&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,373 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#1]
+2014-02-17 13:27:57,373 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4871]
+2014-02-17 13:27:57,373 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4871]
+2014-02-17 13:27:57,374 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4871
+2014-02-17 13:27:57,374 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4871@4871&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,374 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4871]
+2014-02-17 13:27:57,375 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5691]
+2014-02-17 13:27:57,375 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5691]
+2014-02-17 13:27:57,375 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5691
+2014-02-17 13:27:57,376 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5691@5691&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,376 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5691]
+2014-02-17 13:27:57,376 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4977]
+2014-02-17 13:27:57,376 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4977]
+2014-02-17 13:27:57,376 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4977
+2014-02-17 13:27:57,376 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4977@4977&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,377 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4977]
+2014-02-17 13:27:57,377 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5191]
+2014-02-17 13:27:57,377 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5191]
+2014-02-17 13:27:57,377 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5191
+2014-02-17 13:27:57,378 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5191@5191&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,378 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5191]
+2014-02-17 13:27:57,378 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5647]
+2014-02-17 13:27:57,379 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5647]
+2014-02-17 13:27:57,379 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5647
+2014-02-17 13:27:57,379 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5647@5647&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,380 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5647]
+2014-02-17 13:27:57,380 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5642]
+2014-02-17 13:27:57,380 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5642]
+2014-02-17 13:27:57,381 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5642
+2014-02-17 13:27:57,381 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5642@5642&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,381 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5642]
+2014-02-17 13:27:57,382 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5692]
+2014-02-17 13:27:57,382 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5692]
+2014-02-17 13:27:57,382 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5692
+2014-02-17 13:27:57,383 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5692@5692&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,383 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5692]
+2014-02-17 13:27:57,383 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5202]
+2014-02-17 13:27:57,384 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5202]
+2014-02-17 13:27:57,384 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5202
+2014-02-17 13:27:57,384 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5202@5202&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,384 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5202]
+2014-02-17 13:27:57,385 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5711]
+2014-02-17 13:27:57,385 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5711]
+2014-02-17 13:27:57,385 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5711
+2014-02-17 13:27:57,386 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5711@5711&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,386 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5711]
+2014-02-17 13:27:57,386 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#146]
+2014-02-17 13:27:57,387 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#146]
+2014-02-17 13:27:57,387 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#146
+2014-02-17 13:27:57,387 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#146@146&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,387 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#146]
+2014-02-17 13:27:57,388 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5410]
+2014-02-17 13:27:57,388 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5410]
+2014-02-17 13:27:57,388 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5410
+2014-02-17 13:27:57,389 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5410@5410&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,389 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5410]
+2014-02-17 13:27:57,389 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4983]
+2014-02-17 13:27:57,390 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4983]
+2014-02-17 13:27:57,390 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4983
+2014-02-17 13:27:57,391 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4983@4983&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,391 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4983]
+2014-02-17 13:27:57,391 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5655]
+2014-02-17 13:27:57,391 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5655]
+2014-02-17 13:27:57,392 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5655
+2014-02-17 13:27:57,392 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5655@5655&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,392 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5655]
+2014-02-17 13:27:57,393 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5293]
+2014-02-17 13:27:57,393 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5293]
+2014-02-17 13:27:57,393 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5293
+2014-02-17 13:27:57,394 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5293@5293&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,394 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5293]
+2014-02-17 13:27:57,394 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4941]
+2014-02-17 13:27:57,395 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4941]
+2014-02-17 13:27:57,395 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4941
+2014-02-17 13:27:57,395 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4941@4941&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,395 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4941]
+2014-02-17 13:27:57,396 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5562]
+2014-02-17 13:27:57,396 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5562]
+2014-02-17 13:27:57,396 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5562
+2014-02-17 13:27:57,397 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5562@5562&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,397 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5562]
+2014-02-17 13:27:57,397 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5455]
+2014-02-17 13:27:57,398 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5455]
+2014-02-17 13:27:57,398 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5455
+2014-02-17 13:27:57,398 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5455@5455&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,399 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5455]
+2014-02-17 13:27:57,399 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#22]
+2014-02-17 13:27:57,399 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#22]
+2014-02-17 13:27:57,399 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#22
+2014-02-17 13:27:57,400 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#22@22&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,400 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#22]
+2014-02-17 13:27:57,400 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5140]
+2014-02-17 13:27:57,401 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5140]
+2014-02-17 13:27:57,401 [11] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5140
+2014-02-17 13:27:57,401 [11] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5140@5140&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:27:57,401 [11] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5140]
+2014-02-17 13:27:57,404 [11] DEBUG NHibernate.Engine.StatefulPersistenceContext [(null)] <(null)> - initializing non-lazy collections
+2014-02-17 13:27:57,412 [11] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - after autocommit
+2014-02-17 13:27:57,415 [11] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - transaction completion
+2014-02-17 13:27:57,417 [11] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:27:57,886 [11] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - closing session
+2014-02-17 13:27:57,887 [11] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - running BatcherImpl.Dispose(true)

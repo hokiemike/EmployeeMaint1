@@ -1,0 +1,679 @@
+2014-02-17 13:32:03,532 [2] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - [session-id=7876809b-9086-46e5-9946-231bf1e9478a] executing real Dispose(False)
+2014-02-17 13:32:05,890 [25] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - [session-id=379a0202-7ca8-4cb2-a94e-289d6a7357a9] opened session at timestamp: 5704269520437248, for session factory: [/32038f0efe4549269aeaa55701611844]
+2014-02-17 13:32:05,985 [25] DEBUG NHibernate.Engine.Query.QueryPlanCache [(null)] <(null)> - unable to locate HQL query plan in cache; generating (.Take[EmployeeMaint.Data.Entities.Employee](.OrderBy[EmployeeMaint.Data.Entities.Employee,System.String](.Where[EmployeeMaint.Data.Entities.Employee](NHibernate.Linq.NhQueryable`1[EmployeeMaint.Data.Entities.Employee], Quote((e, ) => (GreaterThan(e.OtherEmployeeDepartments.Count, p1))), ), Quote((e, ) => (e.LastName)), ), p2, ))
+2014-02-17 13:32:06,583 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select << begin [level=1, statement=select]
+2014-02-17 13:32:06,626 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement [(null)] <(null)> - FromClause{level=1} :  EmployeeMaint.Data.Entities.Employee (e) -> employee0_
+2014-02-17 13:32:06,670 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e -> employee0_.EMP_RECORD_NUMBER
+2014-02-17 13:32:06,744 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select << begin [level=2, statement=select]
+2014-02-17 13:32:06,749 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElementFactory [(null)] <(null)> - createFromElementInSubselect() : path = e.OtherEmployeeDepartments
+2014-02-17 13:32:06,754 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Util.PathHelper [(null)] <(null)> - parsePath() : e.OtherEmployeeDepartments -> [ ( . e OtherEmployeeDepartments ) ]
+2014-02-17 13:32:06,756 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e -> employee0_.EMP_RECORD_NUMBER
+2014-02-17 13:32:06,764 [25] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement [(null)] <(null)> - handling property dereference [EmployeeMaint.Data.Entities.Employee (e) -> OtherEmployeeDepartments (Class)]
+2014-02-17 13:32:06,773 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode [(null)] <(null)> - getDataType() : OtherEmployeeDepartments -> NHibernate.Type.GenericSetType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]](EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments)
+2014-02-17 13:32:06,793 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement [(null)] <(null)> - FromClause{level=2} :   (<generated>_1) -> otheremplo1_
+2014-02-17 13:32:06,797 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromClause [(null)] <(null)> - addCollectionJoinFromElementByPath() : e.OtherEmployeeDepartments -> dbo.OtherEmployeeDepartments
+2014-02-17 13:32:06,799 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode [(null)] <(null)> - dereferenceCollection() : Created new FROM element for e.OtherEmployeeDepartments : dbo.OtherEmployeeDepartments otheremplo1_
+2014-02-17 13:32:06,800 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e.OtherEmployeeDepartments -> .
+2014-02-17 13:32:06,800 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElementFactory [(null)] <(null)> - createFromElementInSubselect() : e.OtherEmployeeDepartments -> dbo.OtherEmployeeDepartments otheremplo1_
+2014-02-17 13:32:06,844 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select : finishing up [level=2, statement=select]
+2014-02-17 13:32:06,849 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - processQuery() : ( SELECT ( {select clause} ( method cast ( expr_list ( count * ) integer ) ) ) ( FromClause{level=2} dbo.OtherEmployeeDepartments otheremplo1_ ) )
+2014-02-17 13:32:06,899 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Util.SyntheticAndFactory [(null)] <(null)> - Using unprocessed WHERE-fragment [employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number]
+2014-02-17 13:32:06,902 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Util.SyntheticAndFactory [(null)] <(null)> - Using processed WHERE-fragment [employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number]
+2014-02-17 13:32:06,903 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.QueryNode [(null)] <(null)> - getWhereClause() : Creating a new WHERE clause...
+2014-02-17 13:32:06,906 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select >> end [level=2, statement=select]
+2014-02-17 13:32:06,942 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e -> employee0_.EMP_RECORD_NUMBER
+2014-02-17 13:32:06,950 [25] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement [(null)] <(null)> - handling property dereference [EmployeeMaint.Data.Entities.Employee (e) -> LastName (Class)]
+2014-02-17 13:32:06,950 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode [(null)] <(null)> - getDataType() : LastName -> NHibernate.Type.StringType
+2014-02-17 13:32:06,953 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode [(null)] <(null)> - Resolved :  e.LastName -> employee0_.EMP_LAST_NAME
+2014-02-17 13:32:06,958 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select : finishing up [level=1, statement=select]
+2014-02-17 13:32:06,958 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - processQuery() : ( SELECT ( {select clause} employee0_.EMP_RECORD_NUMBER ) ( FromClause{level=1}  ) ( where ( gt ( SELECT ( {select clause} ( method cast ( expr_list ( count * ) integer ) ) ) ( FromClause{level=2} dbo.OtherEmployeeDepartments otheremplo1_ ) ( WHERE ( {theta joins} employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number ) ) ) ? ) ) ( order by ( employee0_.EMP_LAST_NAME employee0_.EMP_RECORD_NUMBER LastName ) asc ) ( take ? ) )
+2014-02-17 13:32:06,982 [25] DEBUG NHibernate.Hql.Ast.ANTLR.Util.JoinProcessor [(null)] <(null)> - Using FROM fragment [dbo.Employee employee0_]
+2014-02-17 13:32:06,982 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker [(null)] <(null)> - select >> end [level=1, statement=select]
+2014-02-17 13:32:06,985 [25] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter [(null)] <(null)> - throwQueryException() : no errors
+2014-02-17 13:32:07,183 [25] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator [(null)] <(null)> - SQL: select TOP (?)  employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, employee0_.EMP_BRANCH_NUMBER as EMP20_0_, employee0_.DefaultAssistant as Default21_0_ from dbo.Employee employee0_ where (select cast(count(*) as INT) from dbo.OtherEmployeeDepartments otheremplo1_ where employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number)>? order by employee0_.EMP_LAST_NAME asc
+2014-02-17 13:32:07,184 [25] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter [(null)] <(null)> - throwQueryException() : no errors
+2014-02-17 13:32:07,257 [25] DEBUG NHibernate.Engine.Query.QueryPlanCache [(null)] <(null)> - located HQL query plan in cache (.Take[EmployeeMaint.Data.Entities.Employee](.OrderBy[EmployeeMaint.Data.Entities.Employee,System.String](.Where[EmployeeMaint.Data.Entities.Employee](NHibernate.Linq.NhQueryable`1[EmployeeMaint.Data.Entities.Employee], Quote((e, ) => (GreaterThan(e.OtherEmployeeDepartments.Count, p1))), ), Quote((e, ) => (e.LastName)), ), p2, ))
+2014-02-17 13:32:07,268 [25] DEBUG NHibernate.Engine.Query.HQLQueryPlan [(null)] <(null)> - find: .Take[EmployeeMaint.Data.Entities.Employee](.OrderBy[EmployeeMaint.Data.Entities.Employee,System.String](.Where[EmployeeMaint.Data.Entities.Employee](NHibernate.Linq.NhQueryable`1[EmployeeMaint.Data.Entities.Employee], Quote((e, ) => (GreaterThan(e.OtherEmployeeDepartments.Count, p1))), ), Quote((e, ) => (e.LastName)), ), p2, )
+2014-02-17 13:32:07,274 [25] DEBUG NHibernate.Engine.QueryParameters [(null)] <(null)> - named parameters: {'p1'='0', 'p2'='30'}
+2014-02-17 13:32:07,343 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened new IDbCommand, open IDbCommands: 1
+2014-02-17 13:32:07,344 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Building an IDbCommand object for the SqlString: select TOP (?)  employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, employee0_.EMP_BRANCH_NUMBER as EMP20_0_, employee0_.DefaultAssistant as Default21_0_ from dbo.Employee employee0_ where (select cast(count(*) as INT) from dbo.OtherEmployeeDepartments otheremplo1_ where employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number)>? order by employee0_.EMP_LAST_NAME asc
+2014-02-17 13:32:07,361 [25] INFO  NHibernate.Loader.Loader [(null)] <(null)> - select TOP (@p0)  employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, employee0_.EMP_BRANCH_NUMBER as EMP20_0_, employee0_.DefaultAssistant as Default21_0_ from dbo.Employee employee0_ where (select cast(count(*) as INT) from dbo.OtherEmployeeDepartments otheremplo1_ where employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number)>@p1 order by employee0_.EMP_LAST_NAME asc
+2014-02-17 13:32:07,377 [25] DEBUG NHibernate.SQL [(null)] <(null)> - select TOP (@p0)  employee0_.EMP_RECORD_NUMBER as EMP1_0_, employee0_.EMP_USER_PROFILE as EMP2_0_, employee0_.EMP_LAST_NAME as EMP3_0_, employee0_.EMP_ACTIVE_CODE as EMP4_0_, employee0_.EMP_FIRST_NAME as EMP5_0_, employee0_.EMP_MIDDLE_NAME as EMP6_0_, employee0_.EMP_PREFIX as EMP7_0_, employee0_.EMP_EXTENSION as EMP8_0_, employee0_.EMP_DEPARTMENT_NUMBER as EMP9_0_, employee0_.EMP_EMAIL_ADDRESS as EMP10_0_, employee0_.EMP_FAXNUMBER as EMP11_0_, employee0_.PaymentAuthority as Payment12_0_, employee0_.EmployeeTypeKey as Employe13_0_, employee0_.IsExempt as IsExempt0_, employee0_.IsOnPayroll as IsOnPay15_0_, employee0_.DefaultUnderwriter as Default16_0_, employee0_.IsExecutive as IsExecu17_0_, employee0_.Signature as Signature0_, employee0_.Initials as Initials0_, employee0_.EMP_BRANCH_NUMBER as EMP20_0_, employee0_.DefaultAssistant as Default21_0_ from dbo.Employee employee0_ where (select cast(count(*) as INT) from dbo.OtherEmployeeDepartments otheremplo1_ where employee0_.EMP_RECORD_NUMBER=otheremplo1_.Emp_Record_Number)>@p1 order by employee0_.EMP_LAST_NAME asc;@p0 = 30 [Type: Int32 (0)], @p1 = 0 [Type: Int32 (0)]
+2014-02-17 13:32:07,395 [25] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] <(null)> - Obtaining IDbConnection from Driver
+2014-02-17 13:32:07,462 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - ExecuteReader took 64 ms
+2014-02-17 13:32:07,466 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened IDataReader, open IDataReaders: 1
+2014-02-17 13:32:07,473 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - processing result set
+2014-02-17 13:32:07,473 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 0
+2014-02-17 13:32:07,491 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5458]
+2014-02-17 13:32:07,511 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5458]
+2014-02-17 13:32:07,525 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5458]
+2014-02-17 13:32:07,538 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 1
+2014-02-17 13:32:07,539 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#1380]
+2014-02-17 13:32:07,540 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#1380]
+2014-02-17 13:32:07,540 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#1380]
+2014-02-17 13:32:07,543 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 2
+2014-02-17 13:32:07,544 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#52]
+2014-02-17 13:32:07,545 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#52]
+2014-02-17 13:32:07,545 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#52]
+2014-02-17 13:32:07,545 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 3
+2014-02-17 13:32:07,546 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5565]
+2014-02-17 13:32:07,546 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5565]
+2014-02-17 13:32:07,547 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5565]
+2014-02-17 13:32:07,547 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 4
+2014-02-17 13:32:07,547 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4911]
+2014-02-17 13:32:07,548 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4911]
+2014-02-17 13:32:07,548 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4911]
+2014-02-17 13:32:07,548 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 5
+2014-02-17 13:32:07,549 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5172]
+2014-02-17 13:32:07,549 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5172]
+2014-02-17 13:32:07,550 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5172]
+2014-02-17 13:32:07,550 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 6
+2014-02-17 13:32:07,550 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4784]
+2014-02-17 13:32:07,551 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4784]
+2014-02-17 13:32:07,551 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4784]
+2014-02-17 13:32:07,551 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 7
+2014-02-17 13:32:07,552 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,552 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,552 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,553 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 8
+2014-02-17 13:32:07,553 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#8]
+2014-02-17 13:32:07,554 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#8]
+2014-02-17 13:32:07,554 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#8]
+2014-02-17 13:32:07,554 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 9
+2014-02-17 13:32:07,555 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4080]
+2014-02-17 13:32:07,555 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4080]
+2014-02-17 13:32:07,555 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4080]
+2014-02-17 13:32:07,556 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 10
+2014-02-17 13:32:07,556 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5297]
+2014-02-17 13:32:07,556 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5297]
+2014-02-17 13:32:07,557 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5297]
+2014-02-17 13:32:07,557 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 11
+2014-02-17 13:32:07,559 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#88]
+2014-02-17 13:32:07,559 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#88]
+2014-02-17 13:32:07,560 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#88]
+2014-02-17 13:32:07,560 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 12
+2014-02-17 13:32:07,561 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#60]
+2014-02-17 13:32:07,561 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#60]
+2014-02-17 13:32:07,561 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#60]
+2014-02-17 13:32:07,562 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 13
+2014-02-17 13:32:07,562 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4819]
+2014-02-17 13:32:07,562 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4819]
+2014-02-17 13:32:07,563 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4819]
+2014-02-17 13:32:07,563 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 14
+2014-02-17 13:32:07,564 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#82]
+2014-02-17 13:32:07,564 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#82]
+2014-02-17 13:32:07,564 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#82]
+2014-02-17 13:32:07,565 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 15
+2014-02-17 13:32:07,565 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#4919]
+2014-02-17 13:32:07,566 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#4919]
+2014-02-17 13:32:07,566 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#4919]
+2014-02-17 13:32:07,566 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 16
+2014-02-17 13:32:07,567 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Employee#5423]
+2014-02-17 13:32:07,567 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Employee#5423]
+2014-02-17 13:32:07,567 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Employee#5423]
+2014-02-17 13:32:07,568 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done processing result set (17 rows)
+2014-02-17 13:32:07,572 [25] DEBUG NHibernate.Driver.NHybridDataReader [(null)] <(null)> - running NHybridDataReader.Dispose()
+2014-02-17 13:32:07,573 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDataReader, open IDataReaders :0
+2014-02-17 13:32:07,573 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - DataReader was closed after 175 ms
+2014-02-17 13:32:07,577 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDbCommand, open IDbCommands: 0
+2014-02-17 13:32:07,579 [25] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:32:07,580 [25] DEBUG NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Closing connection
+2014-02-17 13:32:07,582 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - total objects hydrated: 17
+2014-02-17 13:32:07,593 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5458]
+2014-02-17 13:32:07,611 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,617 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,623 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - object not resolved in any cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,626 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Fetching entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,636 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - batch loading entity: [EmployeeMaint.Data.Entities.Branch#<100, >200>]
+2014-02-17 13:32:07,644 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened new IDbCommand, open IDbCommands: 1
+2014-02-17 13:32:07,644 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Building an IDbCommand object for the SqlString: SELECT branch0_.Branch_Number as Branch1_2_0_, branch0_.Branch_Description as Branch2_2_0_ FROM dbo.Branches branch0_ WHERE branch0_.Branch_Number in (?, ?)
+2014-02-17 13:32:07,647 [25] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT branch0_.Branch_Number as Branch1_2_0_, branch0_.Branch_Description as Branch2_2_0_ FROM dbo.Branches branch0_ WHERE branch0_.Branch_Number in (@p0, @p1)
+2014-02-17 13:32:07,648 [25] DEBUG NHibernate.SQL [(null)] <(null)> - SELECT branch0_.Branch_Number as Branch1_2_0_, branch0_.Branch_Description as Branch2_2_0_ FROM dbo.Branches branch0_ WHERE branch0_.Branch_Number in (@p0, @p1);@p0 = 100 [Type: Int32 (0)], @p1 = 200 [Type: Int32 (0)]
+2014-02-17 13:32:07,649 [25] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] <(null)> - Obtaining IDbConnection from Driver
+2014-02-17 13:32:07,697 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - ExecuteReader took 46 ms
+2014-02-17 13:32:07,698 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened IDataReader, open IDataReaders: 1
+2014-02-17 13:32:07,701 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - processing result set
+2014-02-17 13:32:07,702 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 0
+2014-02-17 13:32:07,703 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,704 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,704 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,705 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 1
+2014-02-17 13:32:07,706 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: EntityKey[EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,706 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - Initializing object from DataReader: [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,706 [25] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] <(null)> - Hydrating entity: [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,707 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done processing result set (2 rows)
+2014-02-17 13:32:07,707 [25] DEBUG NHibernate.Driver.NHybridDataReader [(null)] <(null)> - running NHybridDataReader.Dispose()
+2014-02-17 13:32:07,707 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDataReader, open IDataReaders :0
+2014-02-17 13:32:07,708 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - DataReader was closed after 57 ms
+2014-02-17 13:32:07,708 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDbCommand, open IDbCommands: 0
+2014-02-17 13:32:07,709 [25] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:32:07,709 [25] DEBUG NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Closing connection
+2014-02-17 13:32:07,709 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - total objects hydrated: 2
+2014-02-17 13:32:07,709 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,720 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,721 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,721 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,723 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done entity batch load
+2014-02-17 13:32:07,738 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]
+2014-02-17 13:32:07,751 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5458]
+2014-02-17 13:32:07,761 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5458
+2014-02-17 13:32:07,763 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5458@5458&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,767 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5458]
+2014-02-17 13:32:07,768 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#1380]
+2014-02-17 13:32:07,768 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,769 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,773 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,774 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]
+2014-02-17 13:32:07,774 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#1380]
+2014-02-17 13:32:07,774 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#1380
+2014-02-17 13:32:07,775 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#1380@1380&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,775 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#1380]
+2014-02-17 13:32:07,775 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#52]
+2014-02-17 13:32:07,776 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,776 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,776 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#200]
+2014-02-17 13:32:07,777 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:07,777 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#52]
+2014-02-17 13:32:07,777 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#52
+2014-02-17 13:32:07,778 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#52@52&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,778 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#52]
+2014-02-17 13:32:07,779 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5565]
+2014-02-17 13:32:07,779 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,779 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,779 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,781 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]
+2014-02-17 13:32:07,781 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5565]
+2014-02-17 13:32:07,781 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5565
+2014-02-17 13:32:07,782 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5565@5565&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,782 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5565]
+2014-02-17 13:32:07,782 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4911]
+2014-02-17 13:32:07,783 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,783 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,783 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,784 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]
+2014-02-17 13:32:07,784 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4911]
+2014-02-17 13:32:07,785 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4911
+2014-02-17 13:32:07,785 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4911@4911&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,785 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4911]
+2014-02-17 13:32:07,785 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5172]
+2014-02-17 13:32:07,786 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,786 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,786 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,787 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]
+2014-02-17 13:32:07,787 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5172]
+2014-02-17 13:32:07,787 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5172
+2014-02-17 13:32:07,788 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5172@5172&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,788 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5172]
+2014-02-17 13:32:07,788 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4784]
+2014-02-17 13:32:07,789 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,789 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,790 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,790 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]
+2014-02-17 13:32:07,791 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4784]
+2014-02-17 13:32:07,791 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4784
+2014-02-17 13:32:07,791 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4784@4784&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,792 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4784]
+2014-02-17 13:32:07,792 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,792 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,793 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,793 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,793 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]
+2014-02-17 13:32:07,793 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,793 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4975
+2014-02-17 13:32:07,794 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4975@4975&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,794 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,794 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#8]
+2014-02-17 13:32:07,795 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,795 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,796 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,796 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]
+2014-02-17 13:32:07,797 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#8]
+2014-02-17 13:32:07,797 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#8
+2014-02-17 13:32:07,797 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#8@8&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,797 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#8]
+2014-02-17 13:32:07,798 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4080]
+2014-02-17 13:32:07,798 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,798 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,799 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,799 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]
+2014-02-17 13:32:07,799 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4080]
+2014-02-17 13:32:07,799 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4080
+2014-02-17 13:32:07,800 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4080@4080&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,800 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4080]
+2014-02-17 13:32:07,800 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5297]
+2014-02-17 13:32:07,800 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,801 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,802 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,802 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]
+2014-02-17 13:32:07,802 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5297]
+2014-02-17 13:32:07,802 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5297
+2014-02-17 13:32:07,803 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5297@5297&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,803 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5297]
+2014-02-17 13:32:07,803 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#88]
+2014-02-17 13:32:07,804 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,804 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,804 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,805 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,805 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,805 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Employee#4975]
+2014-02-17 13:32:07,806 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]
+2014-02-17 13:32:07,806 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#88]
+2014-02-17 13:32:07,806 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#88
+2014-02-17 13:32:07,807 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#88@88&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,807 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#88]
+2014-02-17 13:32:07,807 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#60]
+2014-02-17 13:32:07,808 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,808 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,808 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,809 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]
+2014-02-17 13:32:07,809 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#60]
+2014-02-17 13:32:07,809 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#60
+2014-02-17 13:32:07,810 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#60@60&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,810 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#60]
+2014-02-17 13:32:07,810 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4819]
+2014-02-17 13:32:07,811 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,811 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,811 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,812 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]
+2014-02-17 13:32:07,812 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4819]
+2014-02-17 13:32:07,812 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4819
+2014-02-17 13:32:07,813 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4819@4819&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,813 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4819]
+2014-02-17 13:32:07,813 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#82]
+2014-02-17 13:32:07,814 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,814 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,815 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,815 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]
+2014-02-17 13:32:07,816 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#82]
+2014-02-17 13:32:07,816 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#82
+2014-02-17 13:32:07,816 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#82@82&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,817 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#82]
+2014-02-17 13:32:07,817 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#4919]
+2014-02-17 13:32:07,817 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,817 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,818 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,818 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]
+2014-02-17 13:32:07,818 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#4919]
+2014-02-17 13:32:07,819 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#4919
+2014-02-17 13:32:07,819 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#4919@4919&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,820 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#4919]
+2014-02-17 13:32:07,820 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - resolving associations for [EmployeeMaint.Data.Entities.Employee#5423]
+2014-02-17 13:32:07,820 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - loading entity: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,821 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - attempting to resolve: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,821 [25] DEBUG NHibernate.Event.Default.DefaultLoadEventListener [(null)] <(null)> - resolved object in session cache: [EmployeeMaint.Data.Entities.Branch#100]
+2014-02-17 13:32:07,821 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - creating collection wrapper:[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]
+2014-02-17 13:32:07,822 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - adding entity to second-level cache: [EmployeeMaint.Data.Entities.Employee#5423]
+2014-02-17 13:32:07,822 [25] DEBUG NHibernate.Cache.ReadOnlyCache [(null)] <(null)> - Caching: EmployeeMaint.Data.Entities.Employee#5423
+2014-02-17 13:32:07,822 [25] DEBUG NHibernate.Caches.SysCache.SysCache [(null)] <(null)> - adding new data: key=NHibernate-Cache:RSUI.EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data:EmployeeMaint.Data.Entities.Employee#5423@5423&value=NHibernate.Cache.Entry.CacheEntry
+2014-02-17 13:32:07,823 [25] DEBUG NHibernate.Engine.TwoPhaseLoad [(null)] <(null)> - done materializing entity [EmployeeMaint.Data.Entities.Employee#5423]
+2014-02-17 13:32:07,823 [25] DEBUG NHibernate.Engine.StatefulPersistenceContext [(null)] <(null)> - initializing non-lazy collections
+2014-02-17 13:32:07,831 [25] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - after autocommit
+2014-02-17 13:32:07,834 [25] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - transaction completion
+2014-02-17 13:32:07,835 [25] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:32:09,876 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - initializing collection [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]
+2014-02-17 13:32:09,877 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - checking second-level cache
+2014-02-17 13:32:09,881 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - collection not cached
+2014-02-17 13:32:09,896 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - batch loading collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#System.Object[]]
+2014-02-17 13:32:09,901 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened new IDbCommand, open IDbCommands: 1
+2014-02-17 13:32:09,901 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Building an IDbCommand object for the SqlString: SELECT otheremplo0_.Emp_Record_Number as Emp1_0_, otheremplo0_.Department_Number as Department2_0_ FROM dbo.OtherEmployeeDepartments otheremplo0_ WHERE otheremplo0_.Emp_Record_Number in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2014-02-17 13:32:09,902 [25] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT otheremplo0_.Emp_Record_Number as Emp1_0_, otheremplo0_.Department_Number as Department2_0_ FROM dbo.OtherEmployeeDepartments otheremplo0_ WHERE otheremplo0_.Emp_Record_Number in (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+2014-02-17 13:32:09,902 [25] DEBUG NHibernate.SQL [(null)] <(null)> - SELECT otheremplo0_.Emp_Record_Number as Emp1_0_, otheremplo0_.Department_Number as Department2_0_ FROM dbo.OtherEmployeeDepartments otheremplo0_ WHERE otheremplo0_.Emp_Record_Number in (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);@p0 = 5458 [Type: Int32 (0)], @p1 = 1380 [Type: Int32 (0)], @p2 = 52 [Type: Int32 (0)], @p3 = 5565 [Type: Int32 (0)], @p4 = 4911 [Type: Int32 (0)], @p5 = 5172 [Type: Int32 (0)], @p6 = 4784 [Type: Int32 (0)], @p7 = 4975 [Type: Int32 (0)], @p8 = 8 [Type: Int32 (0)], @p9 = 4080 [Type: Int32 (0)]
+2014-02-17 13:32:09,906 [25] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] <(null)> - Obtaining IDbConnection from Driver
+2014-02-17 13:32:09,955 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - ExecuteReader took 48 ms
+2014-02-17 13:32:09,956 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened IDataReader, open IDataReaders: 1
+2014-02-17 13:32:09,958 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]
+2014-02-17 13:32:09,961 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - constructing collection load context for result set [NHibernate.Driver.NHybridDataReader]
+2014-02-17 13:32:09,969 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]]
+2014-02-17 13:32:09,972 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,979 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]
+2014-02-17 13:32:09,981 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]]
+2014-02-17 13:32:09,986 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] in any result-set context
+2014-02-17 13:32:09,986 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] located in load context
+2014-02-17 13:32:09,986 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,987 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:09,988 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]]
+2014-02-17 13:32:09,988 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] in any result-set context
+2014-02-17 13:32:09,988 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] located in load context
+2014-02-17 13:32:09,989 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,989 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]
+2014-02-17 13:32:09,989 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]]
+2014-02-17 13:32:09,990 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]] in any result-set context
+2014-02-17 13:32:09,990 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]] located in load context
+2014-02-17 13:32:09,990 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,990 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]
+2014-02-17 13:32:09,991 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]]
+2014-02-17 13:32:09,991 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]] in any result-set context
+2014-02-17 13:32:09,991 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]] located in load context
+2014-02-17 13:32:09,991 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,991 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]
+2014-02-17 13:32:09,992 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]]
+2014-02-17 13:32:09,992 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]] in any result-set context
+2014-02-17 13:32:09,992 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]] located in load context
+2014-02-17 13:32:09,992 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,993 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]
+2014-02-17 13:32:09,993 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]]
+2014-02-17 13:32:09,993 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]] in any result-set context
+2014-02-17 13:32:09,993 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]] located in load context
+2014-02-17 13:32:09,994 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,994 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]
+2014-02-17 13:32:09,994 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]]
+2014-02-17 13:32:09,995 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]] in any result-set context
+2014-02-17 13:32:09,995 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]] located in load context
+2014-02-17 13:32:09,996 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,996 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]
+2014-02-17 13:32:09,996 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]]
+2014-02-17 13:32:09,997 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]] in any result-set context
+2014-02-17 13:32:09,997 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]] located in load context
+2014-02-17 13:32:09,998 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,998 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]
+2014-02-17 13:32:09,998 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]]
+2014-02-17 13:32:09,999 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]] in any result-set context
+2014-02-17 13:32:09,999 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]] located in load context
+2014-02-17 13:32:09,999 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:09,999 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - processing result set
+2014-02-17 13:32:09,999 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 0
+2014-02-17 13:32:10,000 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,003 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]
+2014-02-17 13:32:10,005 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]]
+2014-02-17 13:32:10,005 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]] in any result-set context
+2014-02-17 13:32:10,006 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]] not located in load context
+2014-02-17 13:32:10,006 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,007 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 1
+2014-02-17 13:32:10,008 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,008 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]
+2014-02-17 13:32:10,008 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]]
+2014-02-17 13:32:10,009 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]] in any result-set context
+2014-02-17 13:32:10,009 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]] not located in load context
+2014-02-17 13:32:10,010 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,010 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 2
+2014-02-17 13:32:10,010 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,011 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]
+2014-02-17 13:32:10,011 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]]
+2014-02-17 13:32:10,011 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]] in any result-set context
+2014-02-17 13:32:10,012 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]] not located in load context
+2014-02-17 13:32:10,012 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,012 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 3
+2014-02-17 13:32:10,012 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,013 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]
+2014-02-17 13:32:10,013 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]]
+2014-02-17 13:32:10,013 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]] in any result-set context
+2014-02-17 13:32:10,013 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]] not located in load context
+2014-02-17 13:32:10,014 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,014 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 4
+2014-02-17 13:32:10,014 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,014 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]
+2014-02-17 13:32:10,014 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]]
+2014-02-17 13:32:10,015 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]] in any result-set context
+2014-02-17 13:32:10,015 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]] not located in load context
+2014-02-17 13:32:10,016 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,016 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 5
+2014-02-17 13:32:10,016 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,016 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:10,017 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]]
+2014-02-17 13:32:10,017 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] in any result-set context
+2014-02-17 13:32:10,017 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] not located in load context
+2014-02-17 13:32:10,017 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,018 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 6
+2014-02-17 13:32:10,018 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,018 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:10,019 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]]
+2014-02-17 13:32:10,019 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] in any result-set context
+2014-02-17 13:32:10,019 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] not located in load context
+2014-02-17 13:32:10,019 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,020 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 7
+2014-02-17 13:32:10,020 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,020 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:10,021 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]]
+2014-02-17 13:32:10,021 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] in any result-set context
+2014-02-17 13:32:10,021 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] not located in load context
+2014-02-17 13:32:10,021 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,021 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 8
+2014-02-17 13:32:10,022 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,022 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:10,022 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]]
+2014-02-17 13:32:10,022 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] in any result-set context
+2014-02-17 13:32:10,023 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] not located in load context
+2014-02-17 13:32:10,023 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,023 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 9
+2014-02-17 13:32:10,023 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,024 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]
+2014-02-17 13:32:10,024 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]]
+2014-02-17 13:32:10,024 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]] in any result-set context
+2014-02-17 13:32:10,024 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]] not located in load context
+2014-02-17 13:32:10,025 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,025 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 10
+2014-02-17 13:32:10,025 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,025 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]
+2014-02-17 13:32:10,025 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]]
+2014-02-17 13:32:10,026 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] in any result-set context
+2014-02-17 13:32:10,026 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] not located in load context
+2014-02-17 13:32:10,026 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,026 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 11
+2014-02-17 13:32:10,026 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,027 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]
+2014-02-17 13:32:10,027 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]]
+2014-02-17 13:32:10,027 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]] in any result-set context
+2014-02-17 13:32:10,027 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]] not located in load context
+2014-02-17 13:32:10,028 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,028 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 12
+2014-02-17 13:32:10,028 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,029 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]
+2014-02-17 13:32:10,029 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]]
+2014-02-17 13:32:10,029 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] in any result-set context
+2014-02-17 13:32:10,029 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] not located in load context
+2014-02-17 13:32:10,029 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,030 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 13
+2014-02-17 13:32:10,030 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,030 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]
+2014-02-17 13:32:10,030 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]]
+2014-02-17 13:32:10,030 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]] in any result-set context
+2014-02-17 13:32:10,031 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]] not located in load context
+2014-02-17 13:32:10,031 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,031 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done processing result set (14 rows)
+2014-02-17 13:32:10,031 [25] DEBUG NHibernate.Driver.NHybridDataReader [(null)] <(null)> - running NHybridDataReader.Dispose()
+2014-02-17 13:32:10,032 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDataReader, open IDataReaders :0
+2014-02-17 13:32:10,032 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - DataReader was closed after 126 ms
+2014-02-17 13:32:10,033 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDbCommand, open IDbCommands: 0
+2014-02-17 13:32:10,033 [25] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:32:10,034 [25] DEBUG NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Closing connection
+2014-02-17 13:32:10,040 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]] in any result-set context
+2014-02-17 13:32:10,041 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]] not located in load context
+2014-02-17 13:32:10,043 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]>@2ab524a]
+2014-02-17 13:32:10,044 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] in any result-set context
+2014-02-17 13:32:10,044 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]] not located in load context
+2014-02-17 13:32:10,044 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]>@44c05a]
+2014-02-17 13:32:10,045 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] in any result-set context
+2014-02-17 13:32:10,045 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]] not located in load context
+2014-02-17 13:32:10,045 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]>@32e4eb]
+2014-02-17 13:32:10,046 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]] in any result-set context
+2014-02-17 13:32:10,046 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]] not located in load context
+2014-02-17 13:32:10,046 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]>@dfe4a7]
+2014-02-17 13:32:10,047 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]] in any result-set context
+2014-02-17 13:32:10,047 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]] not located in load context
+2014-02-17 13:32:10,047 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]>@3d4c8df]
+2014-02-17 13:32:10,048 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]] in any result-set context
+2014-02-17 13:32:10,048 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]] not located in load context
+2014-02-17 13:32:10,048 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]>@24663cc]
+2014-02-17 13:32:10,048 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]] in any result-set context
+2014-02-17 13:32:10,049 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]] not located in load context
+2014-02-17 13:32:10,049 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]>@2deeece]
+2014-02-17 13:32:10,050 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]] in any result-set context
+2014-02-17 13:32:10,050 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]] not located in load context
+2014-02-17 13:32:10,051 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]>@16ff2af]
+2014-02-17 13:32:10,051 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]] in any result-set context
+2014-02-17 13:32:10,051 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]] not located in load context
+2014-02-17 13:32:10,052 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]>@2ea89df]
+2014-02-17 13:32:10,052 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]] in any result-set context
+2014-02-17 13:32:10,053 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]] not located in load context
+2014-02-17 13:32:10,053 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]>@2328cb8]
+2014-02-17 13:32:10,057 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - 10 collections were found in result set for role: EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments
+2014-02-17 13:32:10,061 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]>@2ab524a]
+2014-02-17 13:32:10,068 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5458]
+2014-02-17 13:32:10,069 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]>@44c05a]
+2014-02-17 13:32:10,069 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#1380]
+2014-02-17 13:32:10,070 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]>@32e4eb]
+2014-02-17 13:32:10,070 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#52]
+2014-02-17 13:32:10,070 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]>@dfe4a7]
+2014-02-17 13:32:10,071 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5565]
+2014-02-17 13:32:10,071 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]>@3d4c8df]
+2014-02-17 13:32:10,071 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4911]
+2014-02-17 13:32:10,071 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]>@24663cc]
+2014-02-17 13:32:10,072 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5172]
+2014-02-17 13:32:10,072 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]>@2deeece]
+2014-02-17 13:32:10,072 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4784]
+2014-02-17 13:32:10,072 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]>@16ff2af]
+2014-02-17 13:32:10,073 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4975]
+2014-02-17 13:32:10,073 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]>@2ea89df]
+2014-02-17 13:32:10,073 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#8]
+2014-02-17 13:32:10,073 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]>@2328cb8]
+2014-02-17 13:32:10,074 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4080]
+2014-02-17 13:32:10,074 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - 10 collections initialized for role: EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments
+2014-02-17 13:32:10,079 [25] DEBUG NHibernate.Engine.StatefulPersistenceContext [(null)] <(null)> - initializing non-lazy collections
+2014-02-17 13:32:10,079 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done batch load
+2014-02-17 13:32:10,079 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - collection initialized
+2014-02-17 13:32:10,168 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - initializing collection [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]
+2014-02-17 13:32:10,169 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - checking second-level cache
+2014-02-17 13:32:10,170 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - collection not cached
+2014-02-17 13:32:10,170 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - batch loading collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#System.Object[]]
+2014-02-17 13:32:10,170 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened new IDbCommand, open IDbCommands: 1
+2014-02-17 13:32:10,171 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Building an IDbCommand object for the SqlString: SELECT otheremplo0_.Emp_Record_Number as Emp1_0_, otheremplo0_.Department_Number as Department2_0_ FROM dbo.OtherEmployeeDepartments otheremplo0_ WHERE otheremplo0_.Emp_Record_Number in (?, ?, ?, ?, ?, ?, ?)
+2014-02-17 13:32:10,171 [25] INFO  NHibernate.Loader.Loader [(null)] <(null)> - SELECT otheremplo0_.Emp_Record_Number as Emp1_0_, otheremplo0_.Department_Number as Department2_0_ FROM dbo.OtherEmployeeDepartments otheremplo0_ WHERE otheremplo0_.Emp_Record_Number in (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+2014-02-17 13:32:10,171 [25] DEBUG NHibernate.SQL [(null)] <(null)> - SELECT otheremplo0_.Emp_Record_Number as Emp1_0_, otheremplo0_.Department_Number as Department2_0_ FROM dbo.OtherEmployeeDepartments otheremplo0_ WHERE otheremplo0_.Emp_Record_Number in (@p0, @p1, @p2, @p3, @p4, @p5, @p6);@p0 = 5297 [Type: Int32 (0)], @p1 = 88 [Type: Int32 (0)], @p2 = 60 [Type: Int32 (0)], @p3 = 4819 [Type: Int32 (0)], @p4 = 82 [Type: Int32 (0)], @p5 = 4919 [Type: Int32 (0)], @p6 = 5423 [Type: Int32 (0)]
+2014-02-17 13:32:10,174 [25] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] <(null)> - Obtaining IDbConnection from Driver
+2014-02-17 13:32:10,224 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - ExecuteReader took 48 ms
+2014-02-17 13:32:10,224 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Opened IDataReader, open IDataReaders: 1
+2014-02-17 13:32:10,225 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]
+2014-02-17 13:32:10,225 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - constructing collection load context for result set [NHibernate.Driver.NHybridDataReader]
+2014-02-17 13:32:10,226 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]]
+2014-02-17 13:32:10,226 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]] in any result-set context
+2014-02-17 13:32:10,226 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]] located in load context
+2014-02-17 13:32:10,226 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,226 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]
+2014-02-17 13:32:10,227 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]]
+2014-02-17 13:32:10,227 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]] in any result-set context
+2014-02-17 13:32:10,227 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]] located in load context
+2014-02-17 13:32:10,227 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,227 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]
+2014-02-17 13:32:10,228 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]]
+2014-02-17 13:32:10,228 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]] in any result-set context
+2014-02-17 13:32:10,228 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]] located in load context
+2014-02-17 13:32:10,228 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,229 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]
+2014-02-17 13:32:10,229 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]]
+2014-02-17 13:32:10,229 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]] in any result-set context
+2014-02-17 13:32:10,229 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]] located in load context
+2014-02-17 13:32:10,230 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,230 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]
+2014-02-17 13:32:10,230 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]]
+2014-02-17 13:32:10,230 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]] in any result-set context
+2014-02-17 13:32:10,230 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]] located in load context
+2014-02-17 13:32:10,231 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,231 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]
+2014-02-17 13:32:10,231 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]]
+2014-02-17 13:32:10,232 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]] in any result-set context
+2014-02-17 13:32:10,232 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]] located in load context
+2014-02-17 13:32:10,232 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,232 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set contains (possibly empty) collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]
+2014-02-17 13:32:10,233 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]]
+2014-02-17 13:32:10,233 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]] in any result-set context
+2014-02-17 13:32:10,233 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]] located in load context
+2014-02-17 13:32:10,234 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection not yet initialized; initializing
+2014-02-17 13:32:10,234 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - processing result set
+2014-02-17 13:32:10,234 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 0
+2014-02-17 13:32:10,235 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,235 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]
+2014-02-17 13:32:10,235 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]]
+2014-02-17 13:32:10,235 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]] in any result-set context
+2014-02-17 13:32:10,236 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]] not located in load context
+2014-02-17 13:32:10,236 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,236 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 1
+2014-02-17 13:32:10,236 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,236 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]
+2014-02-17 13:32:10,237 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]]
+2014-02-17 13:32:10,237 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]] in any result-set context
+2014-02-17 13:32:10,237 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]] not located in load context
+2014-02-17 13:32:10,237 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,237 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 2
+2014-02-17 13:32:10,238 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,238 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]
+2014-02-17 13:32:10,238 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]]
+2014-02-17 13:32:10,239 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]] in any result-set context
+2014-02-17 13:32:10,239 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]] not located in load context
+2014-02-17 13:32:10,239 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,239 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 3
+2014-02-17 13:32:10,239 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,240 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]
+2014-02-17 13:32:10,240 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]]
+2014-02-17 13:32:10,240 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]] in any result-set context
+2014-02-17 13:32:10,240 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]] not located in load context
+2014-02-17 13:32:10,241 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,241 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 4
+2014-02-17 13:32:10,241 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,241 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]
+2014-02-17 13:32:10,242 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]]
+2014-02-17 13:32:10,242 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]] in any result-set context
+2014-02-17 13:32:10,242 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]] not located in load context
+2014-02-17 13:32:10,242 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,242 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 5
+2014-02-17 13:32:10,243 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,243 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]
+2014-02-17 13:32:10,243 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]]
+2014-02-17 13:32:10,243 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]] in any result-set context
+2014-02-17 13:32:10,243 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]] not located in load context
+2014-02-17 13:32:10,244 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,244 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result set row: 6
+2014-02-17 13:32:10,244 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - result row: 
+2014-02-17 13:32:10,245 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - found row of collection: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]
+2014-02-17 13:32:10,245 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - starting attempt to find loading collection [[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]]
+2014-02-17 13:32:10,245 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]] in any result-set context
+2014-02-17 13:32:10,245 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]] not located in load context
+2014-02-17 13:32:10,245 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - found loading collection bound to current result set processing; reading row
+2014-02-17 13:32:10,246 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done processing result set (7 rows)
+2014-02-17 13:32:10,246 [25] DEBUG NHibernate.Driver.NHybridDataReader [(null)] <(null)> - running NHybridDataReader.Dispose()
+2014-02-17 13:32:10,246 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDataReader, open IDataReaders :0
+2014-02-17 13:32:10,246 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - DataReader was closed after 70 ms
+2014-02-17 13:32:10,247 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - Closed IDbCommand, open IDbCommands: 0
+2014-02-17 13:32:10,248 [25] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] <(null)> - aggressively releasing database connection
+2014-02-17 13:32:10,248 [25] DEBUG NHibernate.Connection.ConnectionProvider [(null)] <(null)> - Closing connection
+2014-02-17 13:32:10,248 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]] in any result-set context
+2014-02-17 13:32:10,249 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]] not located in load context
+2014-02-17 13:32:10,249 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]>@d5fe50]
+2014-02-17 13:32:10,249 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]] in any result-set context
+2014-02-17 13:32:10,249 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]] not located in load context
+2014-02-17 13:32:10,249 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]>@3c54f02]
+2014-02-17 13:32:10,249 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]] in any result-set context
+2014-02-17 13:32:10,250 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]] not located in load context
+2014-02-17 13:32:10,250 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]>@3ed682d]
+2014-02-17 13:32:10,250 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]] in any result-set context
+2014-02-17 13:32:10,250 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]] not located in load context
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]>@5fbad2]
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]] in any result-set context
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]] not located in load context
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]>@343a059]
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]] in any result-set context
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]] not located in load context
+2014-02-17 13:32:10,251 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]>@2bcc4d4]
+2014-02-17 13:32:10,252 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - attempting to locate loading collection entry [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]] in any result-set context
+2014-02-17 13:32:10,252 [25] DEBUG NHibernate.Engine.Loading.LoadContexts [(null)] <(null)> - collection [CollectionKey[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]] not located in load context
+2014-02-17 13:32:10,252 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]>@36cbb3c]
+2014-02-17 13:32:10,252 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - 7 collections were found in result set for role: EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments
+2014-02-17 13:32:10,253 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]>@d5fe50]
+2014-02-17 13:32:10,253 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5297]
+2014-02-17 13:32:10,253 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]>@3c54f02]
+2014-02-17 13:32:10,254 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#88]
+2014-02-17 13:32:10,254 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]>@3ed682d]
+2014-02-17 13:32:10,254 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#60]
+2014-02-17 13:32:10,254 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]>@5fbad2]
+2014-02-17 13:32:10,254 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4819]
+2014-02-17 13:32:10,255 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]>@343a059]
+2014-02-17 13:32:10,255 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#82]
+2014-02-17 13:32:10,255 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]>@2bcc4d4]
+2014-02-17 13:32:10,255 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#4919]
+2014-02-17 13:32:10,255 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]>@36cbb3c]
+2014-02-17 13:32:10,256 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - collection fully initialized: [EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments#5423]
+2014-02-17 13:32:10,256 [25] DEBUG NHibernate.Engine.Loading.CollectionLoadContext [(null)] <(null)> - 7 collections initialized for role: EmployeeMaint.Data.Entities.Employee.OtherEmployeeDepartments
+2014-02-17 13:32:10,256 [25] DEBUG NHibernate.Engine.StatefulPersistenceContext [(null)] <(null)> - initializing non-lazy collections
+2014-02-17 13:32:10,256 [25] DEBUG NHibernate.Loader.Loader [(null)] <(null)> - done batch load
+2014-02-17 13:32:10,256 [25] DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener [(null)] <(null)> - collection initialized
+2014-02-17 13:32:10,282 [25] DEBUG NHibernate.Impl.SessionImpl [(null)] <(null)> - closing session
+2014-02-17 13:32:10,283 [25] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] <(null)> - running BatcherImpl.Dispose(true)

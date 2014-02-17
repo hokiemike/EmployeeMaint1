@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  
+    <class name="EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data" table="Employee" >
+
+
+    <id name="Id" column="EMP_RECORD_NUMBER" type="Int32" unsaved-value="0" >
+      <generator class="RSUI.Data.Domain.Utils.RSUISequenceGenerator, RSUI.Framework.Shared">
+        <param name="TableName">EMPLOYEE</param>
+      </generator>
+    </id>
+
+    <property name="UserProfile" column="EMP_USER_PROFILE" type="string" length="30" />
+    <property name="LastName" column="EMP_LAST_NAME" type="string" length="60" />
+    <property name="ActiveCode" column="EMP_ACTIVE_CODE" type="char" length="1" /> 
+    <property name="FirstName" column="EMP_FIRST_NAME" type="string" length="60" />
+    <property name="MiddleName" column="EMP_MIDDLE_NAME" type="string" length="60" />
+    <property name="Prefix" column="EMP_PREFIX" type="string" length="5" />
+
+    <property name="Extension" column="EMP_EXTENSION" type="int" not-null="false"/>
+    <property name="DepartmentNumber" column="EMP_DEPARTMENT_NUMBER" type="int" not-null="false" />
+    <property name="EmailAddress" column="EMP_EMAIL_ADDRESS" type="string" length="60" />
+    <property name="FaxNumber" column="EMP_FAXNUMBER" type="string" length="10" />
+
+    <property name="PaymentAuthority" column="PaymentAuthority" type="decimal" not-null="false"/>
+    <property name="EmployeeTypeKey" column="EmployeeTypeKey" type="int" not-null="false"/>
+    <property name="IsExempt" column="IsExempt" type="boolean" />
+    <property name="IsOnPayroll" column="IsOnPayroll" type="boolean" />
+    <property name="DefaultUnderwriter" column="DefaultUnderwriter" not-null="false" />
+    <property name="IsExecutive" column="IsExecutive" type="boolean" />
+    <property name="Signature" column="Signature" type="string" length="250" />
+    <property name="Initials" column="Initials" type="string" length="5" />
+
+            
+    <many-to-one name="Branch" class="EmployeeMaint.Data.Entities.Branch, EmployeeMaint.Data" not-null="false">
+      <column name="EMP_BRANCH_NUMBER" />
+    </many-to-one>
+    
+    
+    <many-to-one name="DefaultAssistant" class="EmployeeMaint.Data.Entities.Employee, EmployeeMaint.Data" not-null="false">
+      <column name="DefaultAssistant" />
+    </many-to-one>
+
+    <set name="OtherEmployeeDepartments" table="OtherEmployeeDepartments" lazy="true">
+      <key column="Emp_Record_Number"/>
+      <element column="Department_Number" type="int"/>
+    </set>
+
+   
+
+  </class>
+</hibernate-mapping>
+
